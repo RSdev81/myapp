@@ -1,0 +1,145 @@
+/* Reset default browser styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar-links ul {
+    list-style: none;
+}
+
+.navbar-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsive toggle */
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* Product Styles */
+.product-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Add your color scheme and typography styles */
+:root {
+    --primary-color: #5D93E1;
+    --secondary-color: #F2F2F2;
+    --accent-color: #F2B137;
+    --text-color: #333;
+}
+
+h1, h2 {
+    color: var(--primary-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
+.add-to-cart {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-to-cart:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
